@@ -1,24 +1,155 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TrebuchetMS.ttf">
+            <string>TrebuchetMS</string>
+        </array>
+        <array key="TrebuchetMSBoldItalic.ttf">
+            <string>Trebuchet-BoldItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sounds of Simon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4V-2R-9S6">
+                                <rect key="frame" x="0.0" y="30" width="375" height="46.5"/>
+                                <fontDescription key="fontDescription" name="Trebuchet-BoldItalic" family="Trebuchet MS" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oLk-fh-sqb">
+                                <rect key="frame" x="7" y="153" width="361" height="361"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uaw-zi-3br">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="178"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1D-Ko-Gst" userLabel="topLeftButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="178"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="x1D-Ko-Gst" secondAttribute="height" multiplier="1:1" id="9ou-he-fRT"/>
+                                                </constraints>
+                                                <state key="normal" image="Top-left"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-oP-ioJ" userLabel="topRightButton">
+                                                <rect key="frame" x="183" y="0.0" width="178" height="178"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="D1g-oP-ioJ" secondAttribute="height" multiplier="1:1" id="F3R-kK-0H4"/>
+                                                </constraints>
+                                                <state key="normal" image="Top-right"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5EB-kC-hUh">
+                                        <rect key="frame" x="0.0" y="183" width="361" height="178"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMs-LY-KlX" userLabel="bottomLeftButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="178" height="178"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hMs-LY-KlX" secondAttribute="height" multiplier="1:1" id="YZ1-TR-x7c"/>
+                                                </constraints>
+                                                <state key="normal" image="Bottom-left"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vc-ay-ddy" userLabel="bottomRightButton">
+                                                <rect key="frame" x="183" y="0.0" width="178" height="178"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="7Vc-ay-ddy" secondAttribute="height" multiplier="1:1" id="idm-tg-I6T"/>
+                                                </constraints>
+                                                <state key="normal" image="Bottom-right"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvd-Zd-nrv" userLabel="gearButton">
+                                <rect key="frame" x="309" y="591" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rvd-Zd-nrv" secondAttribute="height" multiplier="1:1" id="0y0-pF-49h"/>
+                                    <constraint firstAttribute="height" constant="46" id="ZJi-JC-aoX"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Gear Icon"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pjM-o0-xwP" userLabel="scoreStackView">
+                                <rect key="frame" x="20" y="585" width="132" height="52"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zon-E5-DNE" userLabel="currentScoreStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zq-vD-O3E">
+                                                <rect key="frame" x="0.0" y="0.0" width="117.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bff-jS-lrp" userLabel="currentScoreLabel">
+                                                <rect key="frame" x="122.5" y="0.0" width="9.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IoO-Qc-3xA" userLabel="highScoreStackView">
+                                        <rect key="frame" x="0.0" y="31" width="106.5" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="049-G2-ITt">
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="21"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wL0-83-FAt" userLabel="highScoreLabel">
+                                                <rect key="frame" x="97" y="0.0" width="9.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2666666667" green="0.30980392159999998" blue="0.33725490200000002" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M4V-2R-9S6" secondAttribute="trailing" id="4bP-pR-trJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pjM-o0-xwP" secondAttribute="bottom" constant="30" id="Cxf-FI-8k0"/>
+                            <constraint firstItem="rvd-Zd-nrv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="EPE-mw-d4j"/>
+                            <constraint firstItem="M4V-2R-9S6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="Neg-6n-EPd"/>
+                            <constraint firstItem="oLk-fh-sqb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="P91-pc-ZX6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rvd-Zd-nrv" secondAttribute="bottom" constant="30" id="V4C-Vy-kzP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rvd-Zd-nrv" secondAttribute="trailing" constant="20" id="i2V-mg-BwJ"/>
+                            <constraint firstItem="M4V-2R-9S6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j3Y-oN-a7n"/>
+                            <constraint firstItem="oLk-fh-sqb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vb3-65-WR2"/>
+                            <constraint firstItem="pjM-o0-xwP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="x4N-yQ-xzL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="84" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bottom-left" width="178" height="175"/>
+        <image name="Bottom-right" width="175" height="177"/>
+        <image name="Gear Icon" width="305" height="300"/>
+        <image name="Top-left" width="177" height="178"/>
+        <image name="Top-right" width="178" height="175"/>
+    </resources>
 </document>
