@@ -8,11 +8,29 @@ class GameViewController: UIViewController {
     @IBOutlet weak var currentScoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
 
-    enum SimonButton {
+    enum SimonQuadrant {
         case topLeft
         case topRight
         case bottomLeft
         case bottomRight
+
+        var originColor: UIColor {
+            switch self {
+            case .topLeft: return .simonGreen
+            case .topRight: return .simonRed
+            case .bottomLeft: return .simonYellow
+            case .bottomRight: return .simonBlue
+            }
+        }
+
+        var litColor: UIColor {
+            switch self {
+            case .topLeft: return .simonBrightGreen
+            case .topRight: return .simonBrightRed
+            case .bottomLeft: return .simonBrightYellow
+            case .bottomRight: return .simonBrightBlue
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -26,24 +44,15 @@ class GameViewController: UIViewController {
 
     @IBAction func didTapSimonButton(_ sender: Any) {
         guard let button = sender as? UIButton else { return }
-        if button == topLeftButton { lightUp(quadrant: .topLeft) }
-        if button == topRightButton { lightUp(quadrant: .topRight) }
-        if button == bottomLeftButton { lightUp(quadrant: .bottomLeft) }
-        if button == bottomRightButton { lightUp(quadrant: .bottomRight) }
+        if button == topLeftButton { animateButton(topLeftButton, for: .topLeft) }
+        if button == topRightButton { animateButton(topRightButton, for: .topRight) }
+        if button == bottomLeftButton { animateButton(bottomLeftButton, for: .bottomLeft) }
+        if button == bottomRightButton { animateButton(bottomRightButton, for: .bottomRight) }
     }
 
-    func lightUp(quadrant: SimonButton) {
-        switch quadrant {
-        case .topLeft: animateButton(topLeftButton, to: .simonBrightGreen, then: .simonGreen)
-        case .topRight: animateButton(topRightButton, to: .simonBrightRed, then: .simonRed)
-        case .bottomLeft: animateButton(bottomLeftButton, to: .simonBrightYellow, then: .simonYellow)
-        case .bottomRight: animateButton(bottomRightButton, to: .simonBrightBlue, then: .simonBlue)
-        }
-    }
-
-    func animateButton(_ button: UIButton, to brightColor: UIColor, then originalColor: UIColor) {
-        UIView.animate(withDuration: 0.1, animations: { button.imageView?.tintColor = brightColor }, completion: { _ in
-            UIView.animate(withDuration: 0.1, delay: 1, options: [], animations: { button.imageView?.tintColor = originalColor }, completion: nil)
+    func animateButton(_ button: UIButton, for quadrant: SimonQuadrant) {
+        UIView.animate(withDuration: 0.1, animations: { button.imageView?.tintColor = quadrant.litColor }, completion: { _ in
+            UIView.animate(withDuration: 0.1, delay: 0.5, options: [], animations: { button.imageView?.tintColor = quadrant.originColor }, completion: nil)
         })
     }
 
