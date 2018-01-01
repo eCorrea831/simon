@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Simon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,9 @@
                                                     <constraint firstAttribute="width" secondItem="x1D-Ko-Gst" secondAttribute="height" multiplier="1:1" id="9ou-he-fRT"/>
                                                 </constraints>
                                                 <state key="normal" image="Top-left"/>
+                                                <connections>
+                                                    <action selector="didTapSimonButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RI0-rd-TWf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1g-oP-ioJ" userLabel="topRightButton">
                                                 <rect key="frame" x="183" y="0.0" width="178" height="178"/>
@@ -52,6 +55,9 @@
                                                     <constraint firstAttribute="width" secondItem="D1g-oP-ioJ" secondAttribute="height" multiplier="1:1" id="F3R-kK-0H4"/>
                                                 </constraints>
                                                 <state key="normal" image="Top-right"/>
+                                                <connections>
+                                                    <action selector="didTapSimonButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3S-Hy-Z0u"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -64,6 +70,9 @@
                                                     <constraint firstAttribute="width" secondItem="hMs-LY-KlX" secondAttribute="height" multiplier="1:1" id="YZ1-TR-x7c"/>
                                                 </constraints>
                                                 <state key="normal" image="Bottom-left"/>
+                                                <connections>
+                                                    <action selector="didTapSimonButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Puo-8X-Q8D"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vc-ay-ddy" userLabel="bottomRightButton">
                                                 <rect key="frame" x="183" y="0.0" width="178" height="178"/>
@@ -71,6 +80,9 @@
                                                     <constraint firstAttribute="width" secondItem="7Vc-ay-ddy" secondAttribute="height" multiplier="1:1" id="idm-tg-I6T"/>
                                                 </constraints>
                                                 <state key="normal" image="Bottom-right"/>
+                                                <connections>
+                                                    <action selector="didTapSimonButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zoK-bc-cci"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -83,6 +95,9 @@
                                     <constraint firstAttribute="height" constant="46" id="ZJi-JC-aoX"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="Gear Icon"/>
+                                <connections>
+                                    <action selector="didTapGear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UBS-tw-aOg"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pjM-o0-xwP" userLabel="scoreStackView">
                                 <rect key="frame" x="20" y="585" width="132" height="52"/>
@@ -139,6 +154,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomLeftButton" destination="hMs-LY-KlX" id="gS7-Vg-71t"/>
+                        <outlet property="bottomRightButton" destination="7Vc-ay-ddy" id="Csa-9J-rcE"/>
+                        <outlet property="currentScoreLabel" destination="bff-jS-lrp" id="ETM-3d-nGj"/>
+                        <outlet property="highScoreLabel" destination="wL0-83-FAt" id="frM-KG-8uR"/>
+                        <outlet property="topLeftButton" destination="x1D-Ko-Gst" id="bYG-yY-Tum"/>
+                        <outlet property="topRightButton" destination="D1g-oP-ioJ" id="HGQ-pm-bnp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

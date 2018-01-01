@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		ED50DFA01FF6AC12005865AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED50DF9F1FF6AC12005865AB /* AppDelegate.swift */; };
-		ED50DFA21FF6AC12005865AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED50DFA11FF6AC12005865AB /* ViewController.swift */; };
+		ED50DFA21FF6AC12005865AB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED50DFA11FF6AC12005865AB /* GameViewController.swift */; };
 		ED50DFA51FF6AC12005865AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED50DFA31FF6AC12005865AB /* Main.storyboard */; };
 		ED50DFA71FF6AC12005865AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED50DFA61FF6AC12005865AB /* Assets.xcassets */; };
 		ED50DFAA1FF6AC12005865AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED50DFA81FF6AC12005865AB /* LaunchScreen.storyboard */; };
 		ED50DFB51FF6AC12005865AB /* SimonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED50DFB41FF6AC12005865AB /* SimonTests.swift */; };
 		ED50DFC01FF6AC13005865AB /* SimonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED50DFBF1FF6AC13005865AB /* SimonUITests.swift */; };
+		ED50DFCF1FF6CE6C005865AB /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED50DFCE1FF6CE6C005865AB /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		ED50DF9C1FF6AC12005865AB /* Simon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED50DF9F1FF6AC12005865AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED50DFA11FF6AC12005865AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED50DFA11FF6AC12005865AB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		ED50DFA41FF6AC12005865AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED50DFA61FF6AC12005865AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED50DFA91FF6AC12005865AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		ED50DFBB1FF6AC13005865AB /* SimonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED50DFBF1FF6AC13005865AB /* SimonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonUITests.swift; sourceTree = "<group>"; };
 		ED50DFC11FF6AC13005865AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED50DFCE1FF6CE6C005865AB /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				ED50DF9F1FF6AC12005865AB /* AppDelegate.swift */,
-				ED50DFA11FF6AC12005865AB /* ViewController.swift */,
+				ED50DFA11FF6AC12005865AB /* GameViewController.swift */,
 				ED50DFA31FF6AC12005865AB /* Main.storyboard */,
 				ED50DFA61FF6AC12005865AB /* Assets.xcassets */,
 				ED50DFA81FF6AC12005865AB /* LaunchScreen.storyboard */,
 				ED50DFAB1FF6AC12005865AB /* Info.plist */,
+				ED50DFCE1FF6CE6C005865AB /* UIColor+Extension.swift */,
 			);
 			path = Simon;
 			sourceTree = "<group>";
@@ -259,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED50DFA21FF6AC12005865AB /* ViewController.swift in Sources */,
+				ED50DFCF1FF6CE6C005865AB /* UIColor+Extension.swift in Sources */,
+				ED50DFA21FF6AC12005865AB /* GameViewController.swift in Sources */,
 				ED50DFA01FF6AC12005865AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
