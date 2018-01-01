@@ -8,6 +8,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var currentScoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
 
+    var colorSequence = [SimonQuadrant]
+
     enum SimonQuadrant {
         case topLeft
         case topRight
@@ -35,11 +37,23 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setOriginColors()
+        lightNextQuadrant()
+    }
 
+    func setOriginColors() {
         topLeftButton.imageView?.tintColor = .simonGreen
         topRightButton.imageView?.tintColor = .simonRed
         bottomLeftButton.imageView?.tintColor = .simonYellow
         bottomRightButton.imageView?.tintColor = .simonBlue
+    }
+
+    func lightNextQuadrant() {
+        //get a random quadrant
+        //animateButton for that quadrant
+        //add it to the array
+        //start a timer
+        //handle user response, correct answer, incorrect answer, lack of answer
     }
 
     @IBAction func didTapSimonButton(_ sender: Any) {
