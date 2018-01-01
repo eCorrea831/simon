@@ -34,15 +34,17 @@ class GameViewController: UIViewController {
 
     func lightUp(quadrant: SimonButton) {
         switch quadrant {
-        case .topLeft:
-            topLeftButton.imageView?.tintColor = .simonBrightGreen
-        case .topRight:
-            topRightButton.imageView?.tintColor = .simonBrightRed
-        case .bottomLeft:
-            bottomLeftButton.imageView?.tintColor = .simonBrightYellow
-        case .bottomRight:
-            bottomRightButton.imageView?.tintColor = .simonBrightBlue
+        case .topLeft: animateButton(topLeftButton, to: .simonBrightGreen, then: .simonGreen)
+        case .topRight: animateButton(topRightButton, to: .simonBrightRed, then: .simonRed)
+        case .bottomLeft: animateButton(bottomLeftButton, to: .simonBrightYellow, then: .simonYellow)
+        case .bottomRight: animateButton(bottomRightButton, to: .simonBrightBlue, then: .simonBlue)
         }
+    }
+
+    func animateButton(_ button: UIButton, to brightColor: UIColor, then originalColor: UIColor) {
+        UIView.animate(withDuration: 0.1, animations: { button.imageView?.tintColor = brightColor }, completion: { _ in
+            UIView.animate(withDuration: 0.1, delay: 1, options: [], animations: { button.imageView?.tintColor = originalColor }, completion: nil)
+        })
     }
 
     @IBAction func didTapGear(_ sender: Any) {
