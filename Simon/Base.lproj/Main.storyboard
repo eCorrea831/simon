@@ -14,6 +14,9 @@
         <array key="TrebuchetMS.ttf">
             <string>TrebuchetMS</string>
         </array>
+        <array key="TrebuchetMSBold.ttf">
+            <string>TrebuchetMS-Bold</string>
+        </array>
         <array key="TrebuchetMSBoldItalic.ttf">
             <string>Trebuchet-BoldItalic</string>
         </array>
@@ -138,9 +141,36 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEt-ad-CyA">
+                                <rect key="frame" x="157" y="313.5" width="60" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="JTN-Xr-Owr"/>
+                                    <constraint firstAttribute="height" constant="40" id="jiv-BO-ZpH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
+                                <state key="normal" title="Play!">
+                                    <color key="titleColor" red="0.2666666667" green="0.30980392159999998" blue="0.33725490200000002" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapMainCTA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FFp-cj-IcT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="0.30980392159999998" blue="0.33725490200000002" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="TEt-ad-CyA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1qb-Vs-WQm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M4V-2R-9S6" secondAttribute="trailing" id="4bP-pR-trJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pjM-o0-xwP" secondAttribute="bottom" constant="30" id="Cxf-FI-8k0"/>
                             <constraint firstItem="rvd-Zd-nrv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="EPE-mw-d4j"/>
@@ -149,6 +179,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rvd-Zd-nrv" secondAttribute="bottom" constant="30" id="V4C-Vy-kzP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rvd-Zd-nrv" secondAttribute="trailing" constant="20" id="i2V-mg-BwJ"/>
                             <constraint firstItem="M4V-2R-9S6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j3Y-oN-a7n"/>
+                            <constraint firstItem="TEt-ad-CyA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lmF-Ic-OF2"/>
                             <constraint firstItem="oLk-fh-sqb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vb3-65-WR2"/>
                             <constraint firstItem="pjM-o0-xwP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="x4N-yQ-xzL"/>
                         </constraints>
@@ -159,6 +190,7 @@
                         <outlet property="bottomRightButton" destination="7Vc-ay-ddy" id="Csa-9J-rcE"/>
                         <outlet property="currentScoreLabel" destination="bff-jS-lrp" id="ETM-3d-nGj"/>
                         <outlet property="highScoreLabel" destination="wL0-83-FAt" id="frM-KG-8uR"/>
+                        <outlet property="mainCTA" destination="TEt-ad-CyA" id="MvD-0P-4Ue"/>
                         <outlet property="topLeftButton" destination="x1D-Ko-Gst" id="bYG-yY-Tum"/>
                         <outlet property="topRightButton" destination="D1g-oP-ioJ" id="HGQ-pm-bnp"/>
                     </connections>
